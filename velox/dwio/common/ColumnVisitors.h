@@ -396,8 +396,6 @@ class ColumnVisitor {
     addResult(value);
     if (!std::is_same_v<TFilter, velox::common::AlwaysTrue>) {
       addOutputRow(currentRow());
-    } else {
-      addNumValues(1);
     }
   }
 
@@ -405,8 +403,6 @@ class ColumnVisitor {
     addNull();
     if (!std::is_same_v<TFilter, velox::common::AlwaysTrue>) {
       addOutputRow(currentRow());
-    } else {
-      addNumValues(1);
     }
   }
 
